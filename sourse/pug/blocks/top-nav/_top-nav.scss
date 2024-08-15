@@ -2,36 +2,94 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// @include media-breakpoint-up(md) {
-			--bs-gutter-y: var(--bs-gutter-x);
-		// }
+	padding: rem(37) 0 rem(30) 0;
+	&__row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(22)};
 
-	}
-	.section-title{
-		
-	}
-	&__col{
+		align-items: center;
 
+		@include media-breakpoint-up(lg) {
+			align-items: flex-end;
+		}
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: #{rem(40)};
+		}
 	}
-	&__item{
-
+	.section-title {
 	}
-	&__slide{
+	&__col {
+		@include media-breakpoint-down(lg) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&__item {
+	}
+	&__slide {
 		height: auto;
 	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(33)};
+		--bs-btn-padding-y: #{rem(14.35)};
+		--bs-btn-font-size: 1rem;
+		--bs-btn-border-radius: #{rem(50)};
 
+		display: block;
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			--bs-btn-padding-x: #{rem(33.5)};
+			--bs-btn-padding-y: #{rem(14.35)};
+			--bs-btn-font-size: 1rem;
+			--bs-btn-border-radius: #{rem(50)};
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: flex-end;
+		font-weight: 500;
+		line-height: 1.21;
+		color: $gray-900;
+		@include media-breakpoint-up(lg) {
+			border-bottom: 1px solid currentColor;
+			padding-bottom: rem(10);
+		}
+		.iconC {
+			margin-right: rem(15);
+			flex: 0 0 auto;
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 1px;
+			margin-left: rem(12);
+			flex: 0 0 auto;
+		}
+		&:hover {
+			color: $accent;
+		}
+		&--logout {
+			color: $accent;
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		.menu-mobile {
+			margin-left: rem(25);
+		}
+	}
 
-	@include media-breakpoint-up(sm) {}
-	
-	@include media-breakpoint-up(xs) {}
-	// 
-	@include media-breakpoint-between(md, xl) {}
-	// 
-	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-up(xs) {
+	}
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+	//
+	@include media-breakpoint-only(xs) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
-
-

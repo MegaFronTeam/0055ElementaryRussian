@@ -5,27 +5,49 @@
 	<div class="top-nav block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
+				<div class="col-auto"><img src="img/logo.png" alt="" loading="lazy"/>
+				</div>
+				<div class="top-nav__col col order-lg-0 order-last">
 					<div class="menu-mobile menu-mobile--js">
 						<div class="menu-mobile__inner">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 							</div>
 							<nav>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+									<li class="menu-item current-menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Уроки</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Словарь</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">справочник</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прописи</a></li>
 								</ul>
 							</nav>
+							<a class="top-nav__link d-lg-none" href="#">
+								<svg class="iconC iconC-user ">
+									<use xlink:href="img/svg/spriteC.svg#user"></use>
+								</svg>Личный кабинет
+							</a>
+							<a class="top-nav__link top-nav__link--logout d-lg-none" href="#">Выйти
+								<svg class="icon icon-cross ">
+									<use xlink:href="img/svg/sprite.svg#cross"></use>
+								</svg>
+							</a>
 						</div>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
+				<div class="col-auto d-lg-none ms-auto">
 					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 					</div>
+				</div>
+				<div class="col-auto d-none d-lg-block">
+					<a class="top-nav__link" href="#">
+						<svg class="iconC iconC-user ">
+							<use xlink:href="img/svg/spriteC.svg#user"></use>
+						</svg>Личный кабинет
+					</a>
+				</div>
+				<div class="col-lg-auto">
+					<a class="top-nav__btn btn btn-accent" href="#">Регистрация
+					</a>
 				</div>
 			</div>
 		</div>

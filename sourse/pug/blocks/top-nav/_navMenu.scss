@@ -1,46 +1,56 @@
-.menu{
+.menu {
 	@include media-breakpoint-up(lg) {
-
 		display: flex;
 		text-align: center;
 		@include roww(20px);
 		flex-wrap: wrap;
 	}
-
+	@include media-breakpoint-up(xxl) {
+		--bs-gutter-x: 51.1px;
+	}
 	list-style: none;
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	li{
-		
+	li {
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		&.current-menu-item {
+			a {
+				font-weight: 700;
+				color: $accent;
+			}
+		}
 	}
-	a{
+	a {
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: 0 calc(var(--bs-gutter-x) / 2);
+		text-transform: uppercase;
+		color: $body-color;
+		&:hover {
+			font-weight: 700;
+			color: $accent;
+		}
 	}
 }
 
-
-
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: #{rem(1)};
+	--color: #{$gray-900};
+	--position: calc(var(--h) * 9);
 	&.on span {
 		--color: transparent;
 	}
 
-	&.on  { 
-		--position: 0; 
+	&.on {
+		--position: 0;
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h)* 12);
-	position: relative; 
-	font-size: 32px;
+	height: calc(var(--h) * 20);
+	position: relative;
+	font-size: 47px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -48,20 +58,20 @@
 		content: "";
 		position: absolute;
 		left: 0;
-	} 
+	}
 	span {
 		@include a-cent(y);
 		display: block;
 	}
 
-	span:before { 
+	span:before {
 		top: var(--position);
-		transform: rotate3d(0,0,1, var(--rotate, 0));
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
 	}
 
 	span:after {
 		bottom: var(--position);
-		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
 	}
 	span,
 	span:after,
@@ -71,51 +81,48 @@
 		height: var(--h);
 		background-color: var(--color);
 		transition: all 0.3s;
-		backface-visibility: hidden; 
+		backface-visibility: hidden;
 		transform-origin: 50% 50%;
-	} 
+	}
 }
 @include media-breakpoint-down(lg) {
-
-	
-
 	.menu-mobile {
 		position: fixed !important;
 		z-index: 999;
-		max-width: 85%;
+		// max-width: 100%;
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
-		width: 280px;
+		width: 100%;
 		top: 0;
 		// left: 0;
 		right: 0;
 		background-color: $body-bg;
-		&:not(.active){
-			transform: translate3d(120%, 0,0);
+		&:not(.active) {
+			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
-			.toggle-menu-mobile{
+			.toggle-menu-mobile {
 				opacity: 0;
 			}
 		}
-		@include mt(.6s);
+		@include mt(0.6s);
 		will-change: transform;
 
-		
-		.toggle-menu-mobile { 
-			margin-left: -15%;
-			position: absolute; 
-			left: 0;
-			right: auto;
-			color: #FFF;
-			top: 10px;
-			z-index: 9999; 
+		.toggle-menu-mobile {
+			font-size: rem(20);
+
+			position: absolute;
+			right: rem(27);
+			color: #fff;
+			top: rem(27);
+			z-index: 9999;
 			span:after,
 			span:before {
-				--color: #ffffff;
+				--color: #{$gray-900};
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(41)}) 0
+				calc(env(safe-area-inset-bottom, 0px) + #{rem(41)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -125,28 +132,40 @@
 			// opacity: var(--opacity);
 		}
 
-		&.active { 
+		&.active {
 			.toggle-menu-mobile {
 				opacity: 1;
 			}
 		}
 
-
 		ul {
+			text-align: center;
 			position: relative;
+			margin-bottom: rem(38);
 		}
 
 		li {
 			display: block;
 			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
+			border-top: 1px solid rgba(255, 255, 255, 0.13);
+			&:not(:last-child) {
+				margin-bottom: rem(35);
+			}
 
 			a {
-				// font-size: 16px;
-
-				padding: 10px;
 				display: block;
-
+				max-width: max-content;
+				margin: 0 auto;
+			}
+		}
+		.top-nav__link {
+			padding: rem(18) 0;
+			justify-content: center;
+			// max-width: max-content;
+			// margin: 0 auto;
+			border-top: 1px solid $gray-900;
+			&:last-of-type {
+				border-bottom: 1px solid $gray-900;
 			}
 		}
 	}

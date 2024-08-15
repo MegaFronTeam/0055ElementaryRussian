@@ -22,13 +22,25 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col-auto: +img('img/logo.png')
+				+e.col.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
+							+e.link.d-lg-none(href='#')
+								+iconC('user')
+								| Личный кабинет
+							+e.link--logout.d-lg-none(href='#')
+								| Выйти
+								+icon('cross')
 					
-				.col-auto.d-lg-none
+				.col-auto.d-lg-none.ms-auto
 					+menu-toggle()
+				.col-auto.d-none.d-lg-block
+					+e.link(href='#')
+						+iconC('user')
+						| Личный кабинет
+				.col-lg-auto
+					+e.btn.btn.btn-accent(href='#') Регистрация
 	// end top-nav

@@ -472,3 +472,18 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+.btn {
+	--bs-btn-padding-x: #{rem(18)};
+	--bs-btn-padding-y: #{rem(11)};
+	--bs-btn-font-size: #{rem(9.86)};
+	--bs-btn-font-weight: 500;
+	--bs-btn-line-height: 1.21;
+	--bs-btn-border-radius: #{rem(30.81)};
+	@include media-breakpoint-up(md) {
+		--bs-btn-padding-x: #{rem(18)};
+		--bs-btn-padding-y: #{rem(14.35)};
+		--bs-btn-font-size: 1rem;
+		--bs-btn-border-radius: #{rem(50)};
+	}
+}
