@@ -22,7 +22,7 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-auto: +img('img/logo.png')
+				.col-auto: a(href="/"): +img('img/logo.png')
 				+e.col.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner

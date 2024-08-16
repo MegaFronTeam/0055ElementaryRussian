@@ -1,9 +1,30 @@
 mixin footer()
-	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+	+b.FOOTER.footer
+		+e.head
+			.container
+				.row
+					.col-md-4
+						a(href="/"): +img('img/logo.png').res-i
+					.col-sm-6.col-md-4.col-lg
+						+e.link
+							h6 Канцелярия
+							+e.tel(href='+74953455635') +7 495 345 56 35
+							+e.email(href='mailto:document@mosconsv.ru') document@mosconsv.ru
+					.col-sm-6.col-md-4.col-lg
+						+e.link
+							h6 Ректорат
+							+e.tel(href='+74953455635') +7 495 345 56 35
+							+e.email(href='mailto:rectorat@mosconsv.ru') rectorat@mosconsv.ru
+		+e.content
+			.container
+				.row
+					.col-md-4
+						+e.link
+							h6 Канцелярия
+							+soc()
+					.col-sm-6.col-md-4.col-lg
+						+e.link
+							h6 Политика конфиденциальности
+							+e.pdf(href='#'): +iconC('pdf')
+					.col-sm-6.col-md-4.col-lg
+						.text © #[span] Московская государственная консерватория имени П.И.Чайковского. Все права защищены.

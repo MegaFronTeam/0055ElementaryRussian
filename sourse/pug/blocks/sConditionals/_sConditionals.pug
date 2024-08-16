@@ -1,0 +1,25 @@
+mixin sConditionals(data)
+	// start sConditionals
+	+b.SECTION.sConditionals.section#sConditionals&attributes(attributes)
+		.container
+			+b.section-title
+				h3 Условные обозначения заданий
+				
+			+e.row.row
+				mixin item(img, text)
+					+e.item
+						+img(`img/svg/sConditionals-svg-${img}.svg`)
+						!= text
+				.col-md-auto: +item(1, 'Слушайте')
+				.col-md-auto: +item(2, 'Повторяйте')
+				.col-md-auto: +item(3, 'Читайте')
+				.col-md-auto: +item(4, 'Пишите')
+				.col-md-auto: +item(5, 'Покажите')
+				.col-md-auto: +item(6, 'Отвечайте')
+				.col-md-auto: +item(7, 'Смотрите')
+				.col-md-auto: +item(8, 'Выучите')
+				.col-md-auto: +item(9, 'Пойте')
+				.col-md-auto: +item(10, 'Спросите')
+				.col-md-auto: +item(11, 'Говорите')
+				.col-md-auto: +item(12, 'Домашнее задание')
+	// end sConditionals

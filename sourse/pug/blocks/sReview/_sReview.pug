@@ -1,0 +1,50 @@
+mixin sReview(data)
+	// start sReview
+	+b.SECTION.sReview.section#sReview&attributes(attributes)
+		+e.container.container
+			+img('img/bg.png').bg
+			+e.row--swiper-js.row
+				+e.col.col-lg-4
+					h3 Отзывы<br/>наших учеников
+					.swiper-pagination
+				.col-lg-8
+					+e.swiper.swiper
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.content-wrap 
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-1.jpg')
+											span Екатерина Мильных
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-2.jpg')
+											span Екатерина Мильных
+							+e.slide.swiper-slide
+								+e.content-wrap 
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-1.jpg')
+											span Екатерина Мильных
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-2.jpg')
+											span Екатерина Мильных
+							+e.slide.swiper-slide
+								+e.content-wrap 
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-1.jpg')
+											span Екатерина Мильных
+									+e.content
+										p Этот учебник — ваш верный спутник в изучении языка, который откроет перед вами мир русской речи, полный красоты и глубины.
+										+e.user
+											+img('img/sReview-img-2.jpg')
+											span Екатерина Мильных
+	// end sReview
+	

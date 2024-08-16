@@ -49,16 +49,21 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
-	const swiper4 = new Swiper(".sBanners__slider--js", {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: "auto",
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
+	const sReviewClass = document.querySelector(".sReview__row--swiper-js");
+	const sReviewSwiper = new Swiper(
+		sReviewClass.querySelector(".sReview__swiper"),
+		{
+			slidesPerView: 1,
+			spaceBetween: 10,
+			pagination: {
+				el: sReviewClass.querySelector(" .swiper-pagination"),
+				clickable: true,
+				renderBullet: function (index, className) {
+					return '<span class="' + className + '">' + (index + 1) + "</span>";
+				},
+			},
+		}
+	);
 }
 if (document.readyState !== "loading") {
 	eventHandler();

@@ -422,6 +422,7 @@ class JSCCommon {
 		this.disabledBtn();
 		this.customSelect();
 		this.setScreen();
+		this.getCurrentYear(".footer__content .text span");
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

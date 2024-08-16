@@ -7,13 +7,28 @@
 	fill: currentColor;
 }
 
-.iconC-telegram {
-	$h: 16;
+.iconC-dzen {
+	$h: 28;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(28 / #{$h} *1em );
+}
+.iconC-pdf {
+	$h: 28;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(28 / #{$h} *1em );
+}
+.iconC-telegram {
+	$h: 28;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(28 / #{$h} *1em );
 }
 .iconC-user {
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(18 / #{$h} *1em );
+}
+.iconC-vk {
+	$h: 28;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(28 / #{$h} *1em );
 }

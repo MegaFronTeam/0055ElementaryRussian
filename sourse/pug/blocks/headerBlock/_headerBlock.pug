@@ -1,11 +1,8 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+		+e.container.container
+			+img('img/bg.png').bg
+			h1 Интерактивный #[span.text-accent учебник]<br/>#[span.underline по русскому языку]<br/>#[span.text-accent для музыкантов]
+			+img('img/headerBlock-img-1.jpg').img.res-i
 	// end headerBlock

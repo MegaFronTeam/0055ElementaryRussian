@@ -1,0 +1,15 @@
+mixin sCompanion(data)
+	// start sCompanion
+	+b.SECTION.sCompanion.section#sCompanion&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h3 Ваш верный спутник #[span в изучении языка], который откроет перед вами мир русской речи, #[span полный красоты и глубины].
+			mixin card(img, title)
+				+e.card.bg-wrap
+					+img(`img/${img}`, 'bg').picture-bg
+					h5!= title
+			+e.row.row
+				.col-md-6.col-xl-4: +card('sCompanion-img-1.jpg', 'Наш учебник поможет вам быстро достичь уровня А2 с нуля.')
+				.col-md-6.col-xl-4: +card('sCompanion-img-2.jpg', 'Приложение от кафедры РКИ Московской Консерватории поможет вам в изучении русского языка.')
+				.col-md-6.col-xl-4: +card('sCompanion-img-3.jpg', 'Используйте приложение для самостоятельного обучения, занятий с преподавателем или продолжения обучения в Консерватории.')
+	// end sCompanion

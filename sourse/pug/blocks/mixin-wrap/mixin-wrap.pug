@@ -32,15 +32,27 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t,...items)
-	+b.page-head
+mixin page-head(t, text)
+	+b.page-head&attributes(attributes)
 		- let l = items.length
 		.container
-			+breadcrumb('Главная',...items)
-
 			h1= t
+			if text
+				p!= text 
 
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin item(img, title, text, time)
+	+b.item&attributes(attributes)
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${img}`, 'bg')
+		+e.content
+			h4!= title
+			p!= text
+			.row
+				.col!= time
+				.col-auto: +e.btn.btn.btn-outline-dark(href='#') Подробнее

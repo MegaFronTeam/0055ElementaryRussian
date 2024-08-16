@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/footer/_footer.pug
+include ../blocks/modal/_modal.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+ 
+include ../blocks/sCompanion/_sCompanion.pug
+include ../blocks/sLessons/_sLessons.pug
+include ../blocks/sConditionals/_sConditionals.pug
+include ../blocks/sReview/_sReview.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Доступные уроки', 'Здесь вы найдете широкий выбор уроков по различным темам и навыкам, которые помогут вам расширить свои знания и улучшить свои способности. Выберите интересующую вас категорию и начните изучать материал прямо сейчас. ').--lg
+		+sLessons()
+		+sConditionals()
+		+sReview()
+
+	+footer()
