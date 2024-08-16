@@ -32,11 +32,13 @@ mixin search()
 			button 
 				+icon("search")
 
-mixin page-head(t, text)
+mixin page-head(t, text, bg)
 	+b.page-head&attributes(attributes)
 		- let l = items.length
-		.container
-			h1= t
+		+e.container.container
+			if bg
+				+img('img/bg.png').bg
+			h1!= t
 			if text
 				p!= text 
 
@@ -45,11 +47,18 @@ mixin parts(elem)
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
 
-mixin item(img, title, text, time)
+mixin item(img, title, text, time, label)
 	+b.item&attributes(attributes)
 		+e.img-wrap
 			.img-wrap-center
 				+img(`img/${img}`, 'bg')
+		if label
+			+e.label(class=(label === 'Завершено' ? 'done' : ''))
+				if label === 'Завершено'
+					+icon('check')
+					| Завершено
+				else
+					!= label
 		+e.content
 			h4!= title
 			p!= text

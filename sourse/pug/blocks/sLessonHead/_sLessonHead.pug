@@ -1,0 +1,15 @@
+mixin sLessonHead(data)
+	// start sLessonHead
+	+b.SECTION.sLessonHead.section#sLessonHead&attributes(attributes)
+		.container
+			+e.wrap.bg-wrap
+				+img('img/sLessonHead-bg-1.jpg', 'bg').picture-bg
+				.row
+					.col
+						+e.btn.btn.btn-accent(href='#') Начать урок
+					.col-auto
+						+e.btn.btn.btn-light(href='#')
+							| Следующий урок
+							+icon('arrow-right')
+			p После завершения этого урока вы&nbsp;получите фундаментальные знания о&nbsp;музыкальном языке, которые помогут вам лучше понимать и&nbsp;создавать гармоничные музыкальные произведения. Независимо от&nbsp;того, являетесь&nbsp;ли вы&nbsp;музыкантом, композитором или просто любителем музыки, этот урок откроет для вас новые горизонты в&nbsp;мире звуков и&nbsp;гармонии.
+	// end sLessonHead

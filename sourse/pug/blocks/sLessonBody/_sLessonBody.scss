@@ -1,0 +1,50 @@
+// start .sLessonBody
+.sLessonBody {
+	--sPT: #{rem(22)};
+	--sPB: #{rem(17)};
+	--sTPB: #{rem(33)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(30.6)};
+		--sPB: #{rem(28)};
+		--sTPB: #{rem(54)};
+	}
+	ul {
+		list-style-type: none;
+		margin-bottom: 0;
+		border-top: 1px solid $gray-900;
+		li {
+			padding: rem(16) 0;
+			border-bottom: 1px solid $gray-900;
+			@include media-breakpoint-up(lg) {
+				padding: rem(18) 0;
+			}
+		}
+		h6 {
+			margin-bottom: 0;
+			font-weight: 700;
+			color: $accent;
+			letter-spacing: -0.02em;
+			line-height: 1.1875;
+		}
+		p {
+			margin-bottom: 0;
+			letter-spacing: -0.02em;
+			line-height: 1.1875;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sLessonBody
