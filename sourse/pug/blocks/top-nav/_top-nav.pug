@@ -38,9 +38,9 @@ mixin top-nav()
 				.col-auto.d-lg-none.ms-auto
 					+menu-toggle()
 				.col-auto.d-none.d-lg-block
-					+e.link(href='#')
+					+e.link(href='#modal-auth').link-modal-js
 						+iconC('user')
 						| Личный кабинет
 				.col-lg-auto
-					+e.btn.btn.btn-accent(href='#') Регистрация
+					+e.btn.btn.btn-accent(href='#modal-reg').link-modal-js Регистрация
 	// end top-nav

@@ -458,14 +458,16 @@ iframe {
 	}
 }
 
-h1 {
+h1,
+.h1 {
 	font-size: rem(40);
 	@include media-breakpoint-up(lg) {
 		font-size: rem(100);
 	}
 }
 
-h3 {
+h3,
+.h3 {
 	font-size: rem(30);
 	@include media-breakpoint-up(lg) {
 		font-size: rem(40);

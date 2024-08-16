@@ -1,29 +1,97 @@
 :root {
 	--fancybox-content-bg: none;
 }
-
+.fancybox__content > .f-button.is-close-btn {
+	display: none;
+}
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
 }
+.fancybox__slide::before {
+	@include media-breakpoint-down(lg) {
+		content: unset;
+	}
+}
 .modal-win {
-	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(500);
-	// min-height: 100%; 
-	padding: 40px;
-
-	.modal-content {
-		// max-width: 485px;
-		// padding-right: 40px 15px;
+	width: rem(870);
+	padding: rem(50) rem(28) rem(33);
+	border-radius: rem(20);
+	@include media-breakpoint-up(lg) {
+		padding: rem(59) rem(28) rem(41);
 	}
 
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	p {
+		font-size: rem(16);
+		line-height: 1.21;
+		margin-bottom: rem(46);
+		@include media-breakpoint-up(lg) {
+			font-size: rem(20);
+			margin-bottom: rem(75);
+		}
+	}
+	.form-wrap {
+		max-width: rem(430);
+		margin: 0 auto;
+		&__title {
+			font-weight: 700;
+			letter-spacing: -0.02em;
+			line-height: 1;
+			margin-bottom: rem(41);
+			font-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(40);
+				margin-bottom: rem(69);
+			}
+		}
+		&__input-wrap {
+			margin-bottom: rem(10);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(34);
+			}
+		}
+		&__input {
+			color: $gray-900;
+			border-color: $gray-900;
+			border-radius: rem(100);
+			padding: rem(10) rem(31);
+			&::placeholder {
+				color: $gray-900;
+			}
+			&:focus {
+				border-color: $accent;
+			}
+		}
+		&__btn {
+			--bs-btn-padding-x: #{rem(33)};
+			--bs-btn-padding-y: #{rem(14.35)};
+			--bs-btn-font-size: 1rem;
+			--bs-btn-border-radius: #{rem(50)};
+
+			width: 100%;
+			margin-bottom: rem(19);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(34);
+			}
+		}
+		&__text {
+			text-align: center;
+			color: rgba($color: #000000, $alpha: 0.5);
+			a {
+				color: $gray-900;
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
 	}
 }
 
@@ -50,7 +118,7 @@ a {
 	top: 0;
 	text-decoration: none;
 	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
+	opacity: 0.65; // padding: 0 0 18px 10px;
 	// color: #fff;
 	font-style: normal;
 	font-size: 28px;
@@ -101,76 +169,86 @@ a {
 	}
 }
 
+//
+@include media-breakpoint-up(xl) {
+}
 
-// 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(xs) {
+}
 
-@include media-breakpoint-up(xs) {}
+//
+@include media-breakpoint-between(md, xl) {
+}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-// 
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {
+}
 
-@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {
+}
 
-@include media-breakpoint-only(xl) {}
+//
+@include media-breakpoint-down(xl) {
+}
 
-// 
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {
+}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(md) {
+}
 
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+}
 
 @include media-breakpoint-down(xs) {
-
 	.fancybox__container {
 		width: 100% !important;
-		min-height: 100%; 
+		min-height: 100%;
 		transform: none !important;
 	}
 }
 
-
-
 .fancybox-throwOutUp {
-  animation: 0.25s ease both fancybox-throwOutUp;
+	animation: 0.25s ease both fancybox-throwOutUp;
 }
 
 .fancybox-throwOutDown {
-  animation: 0.25s ease both fancybox-throwOutDown;
+	animation: 0.25s ease both fancybox-throwOutDown;
 }
 
 @keyframes fancybox-throwOutUp {
-  from {
-    transform: translate3d(0, -5%, 0);
-    opacity: 0;
-  }
-	
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+	from {
+		transform: translate3d(0, -5%, 0);
+		opacity: 0;
+	}
 
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 @keyframes fancybox-throwOutDown {
-  to {
-    transform: translate3d(0, 10%, 0);
-    opacity: 0;
-  }
+	to {
+		transform: translate3d(0, 10%, 0);
+		opacity: 0;
+	}
 }
