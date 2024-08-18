@@ -1,0 +1,111 @@
+// start .sProfile
+.sProfile {
+	--sPT: #{rem(17)};
+	--sPB: #{rem(17)};
+	// --sTPB: #{rem(42)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(58)};
+		--sPB: #{rem(22)};
+		// --sTPB: #{rem(56)};
+	}
+
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	&__personal-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		margin-bottom: rem(49);
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(330);
+			min-height: rem(246);
+			margin-bottom: rem(94);
+		}
+		h2 {
+			margin-bottom: rem(32);
+			font-size: rem(40);
+			line-height: 1.21;
+			letter-spacing: -0.02em;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: auto;
+				font-size: rem(60);
+			}
+		}
+		p {
+			font-size: rem(16);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(20);
+				line-height: 1.21;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(1, 1);
+		width: 100%;
+		max-width: rem(230);
+		overflow: hidden;
+		border-radius: rem(20);
+		background-color: $accent;
+		margin-bottom: rem(34);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
+	}
+	&__edit {
+		position: absolute;
+		top: rem(15);
+		right: rem(15);
+		z-index: 10;
+	}
+	.tabs {
+		&__caption {
+			display: flex;
+			gap: rem(102);
+			margin-bottom: rem(34);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(59);
+			}
+		}
+		&__btn {
+			@include mt;
+			font-size: rem(20);
+			line-height: 1.21;
+			color: rgba($color: $gray-900, $alpha: 0.5);
+			padding-bottom: rem(10);
+			border-bottom: 1px solid transparent;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(40);
+				padding-bottom: rem(13);
+			}
+			&.active,
+			&:hover {
+				border-bottom-color: $gray-900;
+				color: $gray-900;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sProfile

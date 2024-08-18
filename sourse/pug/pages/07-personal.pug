@@ -1,0 +1,31 @@
+extends ../layout/main.pug
+
+include ../blocks/footer/_footer.pug
+include ../blocks/modal/_modal.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+ 
+include ../blocks/sProfile/_sProfile.pug
+
+include ../blocks/sConditionals/_sConditionals.pug
+include ../blocks/sReview/_sReview.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Справочник'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+sProfile
+		
+		+sConditionals()
+		+sReview()
+
+	+footer()

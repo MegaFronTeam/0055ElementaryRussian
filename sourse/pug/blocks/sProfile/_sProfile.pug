@@ -1,0 +1,19 @@
+mixin sProfile(data)
+	// start sProfile
+	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
+		.container
+			+e.personal-info
+				h2 Вон Санлин
+				+e.img-wrap
+					+e.edit(href='#'): +iconC('edit')
+					.img-wrap-center
+						+img('img/personal-img-1.jpg')
+				p Добро пожаловать в ваш личный кабинет!
+				p Рады видеть вас здесь и надеемся, что личный кабинет станет для вас удобным<br/>и полезным инструментом для управления вашими данными и прогрессом на сайте. 
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Мои данные 
+					.tabs__btn Мои уроки
+				.tabs__content.active 1
+				.tabs__content 2
+	// end sProfile
