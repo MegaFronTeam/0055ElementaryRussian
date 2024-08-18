@@ -27,6 +27,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
 }
+.icon-edit {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(17 / #{$h} *1em );
+}
 .icon-fb {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

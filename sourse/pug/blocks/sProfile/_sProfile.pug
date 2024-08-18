@@ -14,6 +14,69 @@ mixin sProfile(data)
 				.tabs__caption
 					.tabs__btn.active Мои данные 
 					.tabs__btn Мои уроки
-				.tabs__content.active 1
-				.tabs__content 2
+				.tabs__content.active
+					+e.table
+						table
+							tr
+								td Вон Санлин
+								td 
+									a(href="#")
+										+icon('edit')
+										span.d-none.d-md-block редактировать 
+							tr
+								td personal@info.ru
+								td 
+									a(href="#")
+										+icon('edit')
+										span.d-none.d-md-block сменить e-mail
+							tr
+								td *******************
+								td 
+									a(href="#")
+										+icon('edit')
+										span.d-none.d-md-block сменить&nbsp;пароль 
+				.tabs__content
+					+e.table-lessons
+						table
+							tr.d-none.d-lg-table-row
+								th Наименование<br/>урока
+								th Количество<br/>заданий
+								th Количество<br/>правильных ответов
+								th Статус<br/>урока
+							tr
+								td Урок №1. Музыкальный язык: от звука к аккорду
+								td 
+									span.d-lg-none Количество<br/>заданий
+									span.num 10
+								td.text-success
+									span.d-lg-none Количество<br/>правильных<br/>ответов
+									span.num 9
+								td 
+									.status
+										+icon('check')
+										| Завершено
+							tr
+								td Урок №2. Музыкальные инструменты и музыканты
+								td 
+									span.d-lg-none Количество<br/>заданий
+									span.num 10
+								td.text-success
+									span.d-lg-none Количество<br/>правильных<br/>ответов
+									span.num 9
+								td 
+									.status
+										+icon('check')
+										| Завершено
+							tr
+								td Урок №3. Композиторы и их музыка
+								td 
+									span.d-lg-none Количество<br/>заданий
+									span.num 10
+								td.text-success
+									span.d-lg-none Количество<br/>правильных<br/>ответов
+									span.num 3
+								td 
+									a(href="#").left 
+										+icon('arrow-right')
+										| Осталось 5 заданий
 	// end sProfile
