@@ -1,5 +1,8 @@
 extends ../layout/main.pug
 
+include ../blocks/footer/_footer.pug
+include ../blocks/modal/_modal.pug
+
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
@@ -24,10 +27,10 @@ block pagecontent
 	main
 		.section.container 
 			mixin btn(a, t)
-				a( href= a).btn.btn-primary.link-modal-js= t
+				a( href= a).btn.btn-accent.link-modal-js= t
 			+btn("#modal-auth", 'Auth')
 			+btn("#modal-reg", 'Reg')
-	+parts('footer')
+	+footer()
       
 
 

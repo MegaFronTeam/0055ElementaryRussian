@@ -50,20 +50,22 @@ function eventHandler() {
 	});
 
 	const sReviewClass = document.querySelector(".sReview__row--swiper-js");
-	const sReviewSwiper = new Swiper(
-		sReviewClass.querySelector(".sReview__swiper"),
-		{
-			slidesPerView: 1,
-			spaceBetween: 10,
-			pagination: {
-				el: sReviewClass.querySelector(" .swiper-pagination"),
-				clickable: true,
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + (index + 1) + "</span>";
+	if (sReviewClass) {
+		const sReviewSwiper = new Swiper(
+			sReviewClass.querySelector(".sReview__swiper"),
+			{
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: sReviewClass.querySelector(" .swiper-pagination"),
+					clickable: true,
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '">' + (index + 1) + "</span>";
+					},
 				},
-			},
-		}
-	);
+			}
+		);
+	}
 }
 if (document.readyState !== "loading") {
 	eventHandler();

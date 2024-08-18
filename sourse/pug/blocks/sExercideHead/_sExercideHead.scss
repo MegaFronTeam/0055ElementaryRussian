@@ -1,0 +1,152 @@
+// start .sExercideHead
+.sExercideHead {
+	--sPT: #{rem(17)};
+	--sPB: #{rem(17)};
+	--sTPB: #{rem(42)};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(29.2)};
+		--sPB: #{rem(22)};
+		--sTPB: #{rem(56)};
+	}
+	&__row {
+		--bs-gutter-x: #{rem(10)};
+		--bs-gutter-y: #{rem(10)};
+
+		border-bottom: 1px solid $gray-900;
+		padding-bottom: rem(31);
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(34);
+			margin-bottom: rem(44);
+		}
+		a {
+			--bs-btn-padding-x: #{rem(20)};
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: rem(10);
+			@include media-breakpoint-up(lg) {
+				--bs-btn-padding-x: #{rem(32.4)};
+
+				justify-content: flex-start;
+			}
+			.icon {
+				flex: 0 0 auto;
+				font-size: rem(14);
+				&-check {
+					fill: none;
+					stroke: currentColor;
+					stroke-width: 2px;
+					font-size: rem(10);
+				}
+			}
+		}
+	}
+	&__content {
+		border-bottom: 1px solid $gray-900;
+		padding-bottom: rem(31);
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			padding-bottom: rem(41);
+			margin-bottom: rem(44);
+		}
+		h3 {
+			line-height: 1.21;
+			margin-bottom: rem(32);
+			font-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(40.8);
+				font-size: rem(40);
+			}
+		}
+		p {
+			letter-spacing: -0.02em;
+			line-height: 1.21;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+		.line {
+			border-top: 1px solid $gray-200;
+			margin-top: rem(32);
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(37.6);
+				margin-bottom: rem(42.4);
+			}
+		}
+		ul {
+			list-style-type: decimal;
+			padding-left: rem(23);
+			max-width: rem(1029);
+			li {
+				line-height: 1.21;
+				letter-spacing: -0.02em;
+				&:not(:last-child) {
+					margin-bottom: rem(18.8);
+				}
+			}
+			ul {
+				list-style-type: disc;
+				padding-left: 0;
+				margin-top: rem(17.2);
+			}
+		}
+	}
+	&__additional-content {
+		h3 {
+			color: $accent;
+			line-height: 1.21;
+			margin-bottom: rem(32);
+			font-size: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(43);
+				font-size: rem(40);
+			}
+		}
+		.text {
+			font-weight: 700;
+			letter-spacing: -0.02em;
+			font-size: rem(20);
+			line-height: 1.21;
+			max-width: rem(630);
+			margin-bottom: rem(32);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(36);
+			}
+		}
+		audio {
+			display: block;
+			margin-bottom: rem(23);
+			width: 100%;
+			max-width: rem(438);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(42.4);
+			}
+		}
+	}
+	&__conditional-row {
+		--bs-gutter-x: #{rem(9)};
+		--bs-gutter-y: #{rem(10)};
+
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40.8);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sExercideHead

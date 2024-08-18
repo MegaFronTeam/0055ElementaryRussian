@@ -6,20 +6,16 @@ mixin sConditionals(data)
 				h3 Условные обозначения заданий
 				
 			+e.row.row
-				mixin item(img, text)
-					+e.item
-						+img(`img/svg/sConditionals-svg-${img}.svg`)
-						!= text
-				.col-md-auto: +item(1, 'Слушайте')
-				.col-md-auto: +item(2, 'Повторяйте')
-				.col-md-auto: +item(3, 'Читайте')
-				.col-md-auto: +item(4, 'Пишите')
-				.col-md-auto: +item(5, 'Покажите')
-				.col-md-auto: +item(6, 'Отвечайте')
-				.col-md-auto: +item(7, 'Смотрите')
-				.col-md-auto: +item(8, 'Выучите')
-				.col-md-auto: +item(9, 'Пойте')
-				.col-md-auto: +item(10, 'Спросите')
-				.col-md-auto: +item(11, 'Говорите')
-				.col-md-auto: +item(12, 'Домашнее задание')
+				.col-md-auto: +conditionalItem(1, 'Слушайте')
+				.col-md-auto: +conditionalItem(2, 'Повторяйте')
+				.col-md-auto: +conditionalItem(3, 'Читайте')
+				.col-md-auto: +conditionalItem(4, 'Пишите')
+				.col-md-auto: +conditionalItem(5, 'Покажите')
+				.col-md-auto: +conditionalItem(6, 'Отвечайте')
+				.col-md-auto: +conditionalItem(7, 'Смотрите')
+				.col-md-auto: +conditionalItem(8, 'Выучите')
+				.col-md-auto: +conditionalItem(9, 'Пойте')
+				.col-md-auto: +conditionalItem(10, 'Спросите')
+				.col-md-auto: +conditionalItem(11, 'Говорите')
+				.col-md-auto: +conditionalItem(12, 'Домашнее задание')
 	// end sConditionals

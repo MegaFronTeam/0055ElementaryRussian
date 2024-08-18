@@ -28,11 +28,77 @@
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
 			<main>
-				<div class="section container"> <a class="btn btn-primary link-modal-js" href="#modal-auth">Auth</a><a class="btn btn-primary link-modal-js" href="#modal-reg">Reg</a>
+				<div class="section container"> <a class="btn btn-accent link-modal-js" href="#modal-auth">Auth</a><a class="btn btn-accent link-modal-js" href="#modal-reg">Reg</a>
 				</div>
 			</main>
-			<script>addBlock(`footer`)</script>
-			<div id="footerWrap"></div>
+			<footer class="footer">
+				<div class="footer__head">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4"><a href="/"><img class="res-i" src="img/logo.png" alt="" loading="lazy"/></a></div>
+							<div class="col-sm-6 col-md-4 col-lg">
+								<div class="footer__link">
+									<h6>Канцелярия</h6>
+									<a class="footer__tel" href="+74953455635">+7 495 345 56 35
+									</a>
+									<a class="footer__email" href="mailto:document@mosconsv.ru">document@mosconsv.ru
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg">
+								<div class="footer__link">
+									<h6>Ректорат</h6>
+									<a class="footer__tel" href="+74953455635">+7 495 345 56 35
+									</a>
+									<a class="footer__email" href="mailto:rectorat@mosconsv.ru">rectorat@mosconsv.ru
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__content">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="footer__link">
+									<h6>Канцелярия</h6>
+									<div class="soc">
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-telegram ">
+												<use xlink:href="img/svg/spriteC.svg#telegram"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-vk ">
+												<use xlink:href="img/svg/spriteC.svg#vk"></use>
+											</svg>
+										</a>
+										<a class="soc__item" href="#" target="_blank">
+											<svg class="iconC iconC-dzen ">
+												<use xlink:href="img/svg/spriteC.svg#dzen"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg">
+								<div class="footer__link">
+									<h6>Политика конфиденциальности</h6>
+									<a class="footer__pdf" href="#">
+										<svg class="iconC iconC-pdf ">
+											<use xlink:href="img/svg/spriteC.svg#pdf"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-4 col-lg">
+								<div class="text">© <span></span> Московская государственная консерватория имени П.И.Чайковского. Все права защищены.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 		<!--  start modals-->
 		<div id="modal-auth" style="display: none">
