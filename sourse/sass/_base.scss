@@ -473,3 +473,10 @@ h3,
 		font-size: rem(40);
 	}
 }
+
+h5 {
+	font-size: rem(16);
+	@include media-breakpoint-up(lg) {
+		font-size: rem(20);
+	}
+}

@@ -5,8 +5,7 @@ include ../blocks/modal/_modal.pug
 
 include ../blocks/headerBlock/_headerBlock.pug
  
-include ../blocks/sLessonHead/_sLessonHead.pug
-include ../blocks/sLessonBody/_sLessonBody.pug
+include ../blocks/sDirectory/_sDirectory.pug
 
 include ../blocks/sConditionals/_sConditionals.pug
 include ../blocks/sReview/_sReview.pug
@@ -16,7 +15,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Музыкальный язык: от звука к аккорду'
+	- let  title= 'Справочник'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -24,9 +23,10 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head('Музыкальный язык:<br/>от звука к аккорду')
-		+sLessonHead()
-		+sLessonBody()
+		+page-head('Справочник')
+
+		+sDirectory
+		
 		+sConditionals()
 		+sReview()
 
