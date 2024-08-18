@@ -1,0 +1,68 @@
+mixin sDictionary(data)
+	// start sDictionary
+	+b.SECTION.sDictionary.section#sDictionary&attributes(attributes)
+		.container
+			+b.section-title
+				p Здесь вы найдете обширный сборник терминов, определений и объяснений, охватывающих различные области знаний и навыков. Этот раздел предназначен для того, чтобы помочь вам лучше понимать и усваивать информацию, представленную на нашем сайте, а также расширить ваш кругозор.
+			mixin alphabet
+				+e.alphabet
+					.row
+						.col-auto: a(href="#") А
+						.col-auto: a(href="#") Б
+						.col-auto: a(href="#") B
+						.col-auto: a(href="#") Г
+						.col-auto: a(href="#") Д
+						.col-auto: a(href="#") Е
+						.col-auto: a(href="#") Ё
+						.col-auto: a(href="#") Ж
+						.col-auto: a(href="#") З
+						.col-auto: a(href="#") И
+						.col-auto: a(href="#") Й
+						.col-auto: a(href="#") К
+						.col-auto: a(href="#") Л
+						.col-auto: a(href="#") М
+						.col-auto: a(href="#") Н
+						.col-auto: a(href="#") О
+						.col-auto: a(href="#") П
+						.col-auto: a(href="#") Р
+						.col-auto: a(href="#") С
+						.col-auto: a(href="#") Т
+						.col-auto: a(href="#") У
+						.col-auto: a(href="#") Ф
+						.col-auto: a(href="#") Х
+						.col-auto: a(href="#") Ц
+						.col-auto: a(href="#") Ч
+						.col-auto: a(href="#") Ш
+						.col-auto: a(href="#") Щ
+						.col-auto: a(href="#") Ъ
+						.col-auto: a(href="#") Ы
+						.col-auto: a(href="#") Ь
+						.col-auto: a(href="#") Э
+						.col-auto: a(href="#") Ю
+						.col-auto: a(href="#") Я 
+			+alphabet
+			table
+				tr
+					th Термин
+					th Описание
+					th Перевод
+				mixin tr(td1, td2, td3)
+					tr&attributes(attributes)
+						td!= td1
+						td!= td2
+						td!= td3
+				+tr('ада́жио', 'нескл., с.', '慢板  不可数名词')
+				+tr('aккомпаниа́тор', '', '伴奏')
+				+tr('аккомпани́ровать', 'нсв (-ирую, -ируешь, -ируют)', '伴奏者')
+				+tr('саккомпани́ровать', 'св (кому? 3 п. на чём? 6 п.)', '伴奏 动词完成式 （为谁？第三格，用什么？第六格）')
+				+tr('', '~ певице на рояле', '用钢琴为女歌手~').default
+				+tr().p-0
+				+tr('акко́рд', 'финальный ~', '和弦， 终止~')
+				+tr('акко́рдовый', '-ая, -ое, -ые; ~ звук', '和弦的')
+				+tr('aку́стика', '', '音响，音效')
+				+tr('алле́гро', 'нескл., с.', '快板  不可数名词')
+				+tr('', '1) в темпе ~ ', '1）~ 的速度').default
+				+tr('', '2) сонатное ~', '2）奏鸣曲式的 ~ ').default
+				+tr('аллема́нда', '', '阿勒芒德 （舞曲）')
+			+alphabet
+	// end sDictionary
