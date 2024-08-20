@@ -7,7 +7,7 @@
 	text-align: center;
 	@include media-breakpoint-up(lg) {
 		text-align: left;
-		margin-top: rem(-79);
+		// margin-top: rem(-79);
 	}
 	&__row {
 		// --bs-gutter-x: #{rem()};

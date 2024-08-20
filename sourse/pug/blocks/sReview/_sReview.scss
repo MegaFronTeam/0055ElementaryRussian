@@ -9,6 +9,8 @@
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(71)};
 		--sPB: #{rem(150)};
+
+		margin-bottom: rem(-79);
 	}
 	&__container {
 		position: relative;
